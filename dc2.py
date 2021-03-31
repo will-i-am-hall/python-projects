@@ -23,12 +23,12 @@ def openfile():
         deck.append(nl)
     
         
-    leg = name[:-4] + ".txt"
+    newfile = name[:-4] + ".txt"
 
     deck[-1] = ""
     deck[-2] = ""
 
-    with open(leg, "w") as file_object:
+    with open(newfile, "w") as file_object:
         for thing in deck:
             file_object.write(thing)
 
@@ -36,7 +36,7 @@ def openfile():
 
     frame2 = Frame(interface, padx = 25, pady = 25)
 
-    deck = Label(frame2, text = leg + " created!")
+    deck = Label(frame2, text = newfile + " created!")
     deck.pack()
     frame2.pack()
     
